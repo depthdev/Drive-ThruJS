@@ -1,0 +1,88 @@
+<!--
+Copyright 2014 by Intellectual Reserve, Inc.
+
+Licensed under the Apache License, Version 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+
+Author:        Adam Carson
+Dependencies:  jquery.js (1.8.3+)
+
+Name: DRIVE-THRUJS Lite / DRIVE-THRU.JS Lite
+Description: Very simple carousel image lazy-loader.
+Options: Change the current percent and the time it takes to complete
+-->
+
+  <h1>DRIVE-THRUJS Lite / DRIVE-THRU.JS Lite (Plugin)</h1>
+  <h2>Super-Simple-Image-Carousel-Lazy-Loader</h2>
+
+  <p>All you need is 4 things:</p>
+  <ol>
+    <li>jQuery</li>
+    <li>The "Drive-Thru" script</li>
+    <li>Place this in your carousel script where you can pass in the current slide number each time it changes:
+      <textarea class="required-load-method">DRIVE_THRU.load(num);</textarea>
+    </li>
+    <li>Then make each &lt;img&gt; element look like this:
+      <textarea class="required-attributes"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://your-actual-image-url.jpg" alt="alternate text here"/></textarea>
+      <ul>
+        <li><strong>Optional</strong> fallback (don't worry, it doesn't get loaded but makes images available to users without JavaScript):
+          <textarea class="optional">
+            <noscript> 
+              <img src="http://your-actual-image-url.jpg" alt="alternate text here"/> 
+            </noscript></textarea>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>EXAMPLE:</h3>
+
+    <figure class="slideshow">
+
+      <nav class="sliderNav">
+        <a href="#d" data-direction="left">&#x25C0;</a>
+        <a href="#d" data-direction="right">&#x25B6;</a>
+      </nav>
+
+      <ul>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(1).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(1).jpg" alt="image" />
+        </li>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(3).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(3).jpg" alt="image" />
+        </li>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(4).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(4).jpg" alt="image" />
+        </li>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(5).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(5).jpg" alt="image" />
+        </li>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(6).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(6).jpg" alt="image" />
+        </li>
+        <li>
+          <noscript> 
+            <img src="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(7).jpg" alt="image"/> 
+          </noscript>
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-drive-thru="http://photography.clearwavedesigns.com/gallery/images/gallery/architectures/architectures%20(7).jpg" alt="image" />
+        </li>
+      </ul>
+
+    </figure>
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAYAAADGWyb7AAAVuUlEQVR4Ae2deZAURb7Hf3MxwwznyCWCgCKMCAj4FjlWDoEFAg3x4VvwD85QRJenGLFvQXFXQVE8QV8oAn94vEBg9bnoHwKyBgPKISuiC7geMIKiHCLHKDDMcGx9csgmO6e6e3q6iqke+hdRXVdWVubvW78zs6rlmmuu+UZEzqaW5OEBmKUB2MKFC51VipKFA3feeadk0tizZxG4FCUTB9KTqbGptp7nQAq487xIqq0UcEkF1/nGpmzceV4k1ZYCrjpbvH79ejl69KiUlpZKfn5+qCk//PCDtG/fXo4dOyaHDx+WSy65RBo1aiS1a9eWli1bhspdrBvVDhyMb9CggbRu3ToMgz179kizZs3kq6++krZt2ypg33rrLWnTpo18+eWX0r17d0lLS5O6detKWVmZAviKK66QrKwsdV29evXC6qtpO4EArm/fvjJu3LgKvP3Ln+6TY2vmho4//fspknlZFwXi5n0i//q6SA4dOiQ//fSTZGZmyq+//qqk9tSpU7J37151HGk+ceKEnDx5MiS1LVq0kNzc3FC9ybgRCODcGAfzz5w4IsdWznA7LQXO0Q71mklmkwLJaNNaMltdLyW5LWTroVpyuPi4fP7559KwYUMVoyKxTZs2lf3798u1116rJBaJZv/gwYMKdKS7fv360q5dO9f7Be2gAq46A3BUmxsdP35c0ms3cDsVOnameJ+UOouiTa+qFYCmO4D2BdD81pLesJVktb5e9h85IUUlBbJmzRo5cuSIktr09HTp0aOHAoyLkU4kFSlm+f777xX4qGBsLEtQqNolLpItKikpkTQHOMBD8uKhMEDPXZjtrK92lo4OmBltnUWB2kYym7aXA8dEik41k3379imbSpsAFWcoJydHNm7cqMBm/7vvvpNLL700BGh1qd1qBy4SINnZsFoko2mBnNm1MVKxuI+fPrRLWEzSoALsANRvswIltRmN26tiWWOnys5de6T4pEhJ/bby2WefKekE6HfffVeV+fHHHwXJxNaaYOJMRdIqZhvi3Q4EcDDApiZNmigJqO1IRpmHwNn3sffdpJUyKEkWCICzWveQtEY5kjmgQNLqNFUSjBRvOZCunCZsbGFhoXTp0kXZ27vuuktd69VPIICjkzYRHuzatUupNvtcEPb1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" alt="logo" class="logo"/>
