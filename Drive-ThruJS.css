@@ -1,0 +1,161 @@
+/*
+ * Copyright 2014 by Intellectual Reserve, Inc.
+*
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Author:        Adam Carson
+ * Dependencies:  jquery.js (1.8.3+)
+ *
+ * Name: DRIVE-THRUJS Lite / DRIVE-THRU.JS Lite
+ * Description: Very simple carousel image lazy-loader.
+ * Options: Change the current percent and the time it takes to complete
+ */
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+background: #7d7e7d;
+background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e));
+background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%);
+background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%);
+}
+
+body {
+  width: 960px;
+  margin: 0 auto;
+  font-family: 'Georgia', sans-serif;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+ol li ul li {
+  font-size: 0.75rem;
+}
+textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 5px 0;
+  padding: 15px;
+  border-radius: 15px;
+  background: #ff5500;
+  color: #fff;
+  font-family: 'Courier', sans-serif;
+}
+textarea.required-load-method {
+  height: 50px;
+}
+textarea.required-attributes {
+  height: 65px;
+}
+textarea.optional {
+  height: 80px;
+  background: #bb5500;
+}
+
+.slideshow {
+  position: relative;
+  width: 820px;
+  margin-top: 1em;
+  overflow: scroll;
+}
+
+
+.sliderNav {
+  display: none;
+}
+
+.sliderNav a {
+  position: absolute;
+  text-decoration: none;
+  color: #fff;
+  font-size: 5em;
+  opacity: 0.25;
+}
+
+.sliderNav a:hover {
+  opacity: 0.5;
+}
+
+.sliderNav a:first-child {
+  top: 220px;
+  left: 15px;
+}
+
+.sliderNav a:last-child {
+  top: 220px;
+  right: 15px;
+}
+
+.slideshow ul {
+  list-style-type: none;
+  padding: 0;
+  width: 5000px;
+}
+
+.slideshow li {
+  float: left;
+}
+
+.slideshow img {
+  width: 820px;
+  border: 10px solid #222;
+}
+
+
+a {
+  color: #000;
+  text-shadow: 0 0 5px #000;
+}
+div {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 0.8rem;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.github-wrapper {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.github {
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  display: block;
+  width: 250px;
+  padding: 10px;
+  border: 1px dashed #ccc;
+  text-decoration: none;
+  background: #ff0;
+  box-shadow: 0 0 0 4px #ff0;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+  vertical-align: middle;
+  text-align: center;
+  transform: rotate(45deg);
+}
+.github:hover:before {
+  content: attr(href);
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  text-align: right;
+  transform: rotate(-45deg);
+}
